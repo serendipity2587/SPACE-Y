@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch file",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${file}"}
+        
+    ]
+}
+{app = dash.Dash('Total Successful Launches')
+app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
+    style={'textAlign': 'center', 'color': '#503D36',
+           'font-size': 40
+        })
+    ], 
+dcc.Dropdown(id='site-dropdown',
+                options=[
+        {'label': 'All Sites', 'value': 'ALL'
+        },
+        {'label': 'CCAFS LC-40', 'value': 'CCAFS LC-40'
+        },
+        {'label': 'VAFB SLC-4E', 'value': 'VAFB SLC-4E'
+        },
+        {'label': 'KSC LC-39A', 'value': 'KSC LC-39A'
+        },
+        {'label': 'CCAFS SLC-40', 'value': 'CCAFS SLC-40E'
+        }
+    ],
+                value='ALL',
+                placeholder="Select a Launch Site here",
+                searchable=True
+                ),
+ style={'width':'80%','padding':'3px','font-size':'20px','text-align-last':'center'
+    }
+    ),
+html.Br()
+}
+
